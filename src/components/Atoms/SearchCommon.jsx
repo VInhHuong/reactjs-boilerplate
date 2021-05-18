@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import { Input } from 'antd';
 import { noop, trim } from 'lodash';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 const { Search } = Input;
 

@@ -3,19 +3,20 @@ import './App.less';
 
 import { Button } from 'antd';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import logo from './logo.svg';
 
 function App() {
   const [count, setCount] = useState(0);
-
+  const { t } = useTranslation();
   return (
     <div className="App">
       <header className="flex flex-col items-center w-full pt-8">
         <span className="w-24 animate-bounce">
           <img src={logo} alt="logo" />
         </span>
-        <p className="text-primary">Hello Vite + React!</p>
+        <p className="text-primary">{t('title')}</p>
         <p>
           <Button onClick={() => setCount((count) => count + 1)} type="primary">
             count is: {count}
